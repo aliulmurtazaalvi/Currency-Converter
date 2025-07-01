@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+      <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">
+        Currency Converter
+      </h1>
+      <div class="space-y-4">
+        <!-- From Currency -->
+        <div>
+          <label
+            for="from-currency"
+            class="block text-sm font-medium text-gray-700"
+            >From Currency</label
+          >
+          <div class="flex space-x-2">
+            <select
+              id="from-currency"
+              class="mt-1 block w-1/2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="usd">USD - US Dollar</option>
+              <option value="pkr">PKR - Pakistani Rupee</option>
+              <option value="eur">EUR - Euro</option>
+              <option value="gbp">GBP - British Pound</option>
+              <option value="jpy">JPY - Japanese Yen</option>
+              <option value="inr">INR - Indian Rupee</option>
+              <option value="aud">AUD - Australian Dollar</option>
+              <option value="cad">CAD - Canadian Dollar</option>
+            </select>
+            <input
+              type="number"
+              id="from-amount"
+              placeholder="Amount"
+              class="mt-1 block w-1/2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+        </div>
+        <!-- Swap Button -->
+        <div class="flex justify-center">
+          <button
+            type="button"
+            id="swap-btn"
+            aria-label="Swap currencies"
+            class="bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 7h12m0 0l-4-4m4 4l-4 4m-12 6H4m0 0l4 4m-4-4l4-4"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <!-- To Currency -->
+        <div>
+          <label
+            for="to-currency"
+            class="block text-sm font-medium text-gray-700"
+            >To Currency</label
+          >
+          <div class="flex space-x-2">
+            <select
+              id="to-currency"
+              class="mt-1 block w-1/2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="pkr">PKR - Pakistani Rupee</option>
+              <option value="usd">USD - US Dollar</option>
+              <option value="eur">EUR - Euro</option>
+              <option value="gbp">GBP - British Pound</option>
+              <option value="jpy">JPY - Japanese Yen</option>
+              <option value="inr">INR - Indian Rupee</option>
+              <option value="aud">AUD - Australian Dollar</option>
+              <option value="cad">CAD - Canadian Dollar</option>
+            </select>
+            <input
+              type="number"
+              id="to-amount"
+              placeholder="Amount"
+              class="mt-1 block w-1/2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+        </div>
+        <!-- Convert Button -->
+        <button
+          type="button"
+          id="convert-btn"
+          class="w-full bg-green-500 text-white p-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+        >
+          Convert
+        </button>
+        <!-- Result Display -->
+        <div id="result" class="text-center text-gray-700 mt-4 hidden">
+          <p id="result-text"></p>
+        </div>
+      </div>
+      <script src="app.js"></script>
+    </div>
+  </body>
+</html>
